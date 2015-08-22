@@ -1,4 +1,16 @@
 <h1>So you wanna create an article, do ya?</h1>
+
+<% if @article.errors.any? %>
+  <h2>You dun goofed x<%= @article.errors.count  %> </h2>
+  <details>
+    <summary>Check em errors</summary>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </details>
+<% end %>
 <%= form_for :article, url: articles_path do |f| %>
   <p>
     <%= f.label :title %><br>
