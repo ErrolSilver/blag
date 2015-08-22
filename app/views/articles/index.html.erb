@@ -1,0 +1,8 @@
+<h1>Heres a list of yer fuckin articles</h1>
+<% @articles.each do |article| %>
+  <hr>
+  <section>
+    <h1><%= article.title %></h1>
+    <p><%= article.text %></p>
+  </section>
+<% end %>
