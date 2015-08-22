@@ -1,8 +1,14 @@
+<a href="/">home</a>
 <h1>Heres a list of yer fuckin articles</h1>
 <% @articles.each do |article| %>
   <hr>
   <section>
     <h1><%= article.title %></h1>
     <p><%= article.text %></p>
+    
+    <ul>
+      <li><%= link_to 'Better look', article_path(article) %></li>
+      <li><%= link_to 'Improve', edit_article_path(article) %></li>
+    </ul>
   </section>
 <% end %>

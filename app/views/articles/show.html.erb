@@ -1,3 +1,4 @@
+<a href="/">home</a>
 <h1>Here is yer fuckin article</h1>
 <p>
   <strong>Title:</strong>
@@ -9,4 +10,5 @@
   <%= @article.text %>
 </p>
 
+<%= link_to 'Improve', edit_article_path(@article) %>
 <%= link_to 'Somewhere else', articles_path %>
